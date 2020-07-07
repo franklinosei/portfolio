@@ -1,0 +1,86 @@
+.about-page-wrapper{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.padding-top {
+    padding-top: 120px;
+}
+
+
+
+.sectionTitle {
+    margin-bottom: 60px;
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+.s30-reverse {
+    margin-top: -30px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.about-image {
+    
+}
+
+.about-image:before {
+    height: 65%;
+    width: 15px;
+    background: rgba(3,127,255,.6);
+}
+
+.about-content h3 {
+    font-weight: 600;
+    margin-top: -8px;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    
+}
+
+
+.about-content p {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    line-height: 1.8rem;
+    font-family: Nunito,sans-serif;
+    color: #a4acc4;
+    justify-content: center;
+}
+
+
+
+.color-theme {
+    color: dodgerblue;
+}
+
+.service {
+    padding: 20px;
+}
+
+.service h5 {
+    color: white;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.service p {
+    color: #a4acc4;
+}
+
+.service-icon {
+    margin-bottom: 20px;
+    display: inline-block;
+    color: #037fff;
+    font-size: 2.5rem;
+}
