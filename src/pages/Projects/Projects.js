@@ -11,7 +11,7 @@ const Projects = ({ user }) => {
         import { ProjectItem, ProjectTitle, SkillContainer } from './styles';
         */}
 
-          <h5 className='bg-white'>Page is under construction</h5>
+            <h5 className='bg-black' style={{color:'white'}}>Page is under construction</h5>
 
         {/*
         <SectionTitle>Projects</SectionTitle>

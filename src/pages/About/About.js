@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { Row, Col } from 'react-bootstrap';
 import './About.css';
-import Tilt from 'react-tilt';
+import img from './img/img.jpg';
+import { Col} from 'react-bootstrap'; 
 import {AwesomeButton} from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import { DiCodeBadge,  } from "react-icons/di";
@@ -12,67 +12,71 @@ import {GiArtificialIntelligence} from 'react-icons/gi';
 
 const About = ({ user }) => {
   return (
-    <Layout user={user}>
-
+    <Layout user={user}> 
+    
       <div className='about-page-wrapper'>
 
-       <div className='padding-top '>
+        <div className='about-area padding-top'>
+
           <div className='sectionTitle'>
-              <h2>About</h2>
-              
+                <h2>About Me</h2>  
+                <hr className='hr shadow-3'/>  
           </div>
 
-          
+          <div className='about-me-content'>
 
-          <Row className=''>
-            <Col xs={6}>
+            <Col xs={6} className='col'>
               
-                <Tilt className="Tilt" options={{ max : 5 }} style={{ }} >
-                      <div className='about-image Tilt-inner'>
-                        <img alt='aboutimage' src='https://unsplash.com/photos/dYEuFB8KQJk/download?force=true&w=1920' />
-                      </div>
-                </Tilt>
+                        <div className='about-image Tilt-inner br3'>
+                          <img alt='aboutimage' src={img} />
+                        </div>
+              
             </Col>
 
-            <Col xs={6}>
-                <div className='about-content'>
-                  <h3>I am <span class="color-theme">Franklin Osei</span></h3>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of 
-                    type and scrambled it to make a type
-                  </p>
+            <div className='mt-30'></div>
 
-                  <a  href="/files/empty.pdf">
-                    <AwesomeButton size="small" type="primary">View CV</AwesomeButton>                   
-                  </a>
+            <div>
 
-                </div>
-              </Col>
-          </Row>
+              <Col xs={6} className='about-content mt-30 col'>
+                    <h3>I am <span class="color-theme">Franklin Osei</span></h3>
+                    <p className='br2'>
+                      I'm a Passionate <strong>Data scientist,
+                      AI Engineer and a Full-stack Developer </strong>
+                       with many years of experience.
 
-
-        </div>
+                       <blockquote className="notification br2 pa3">
+                       <em>
+                         I look forward to working with you soon!
+                       </em>
+                      </blockquote>
+                     </p>
+          
  
+                    <a  href="/files/empty.pdf">
+                      <AwesomeButton size="small" type="primary"> View CV </AwesomeButton>                   
+                    </a>
+
+                </Col>
+
+            </div>
+          </div>
+        </div>
 
 
-        <div className='sercive-area padding-top bg-grey'>
+        <div className='paddings-top service-area'>
 
           <div className='sectionTitle'>
-             <h2>Services</h2>
-             
+              <h2>Services</h2>
+              <hr className='hr shadow-3'/>
           </div>
-
-          <div className='services-wrapper s30-reverse'>
-            <Row>
-                <Col xs={4} className='mt-30'>
-                  <div className="service br2">
+            <div className='services'>
+                <Col sm>
+                  <div className="service br3 shadow-5">
                       <span className="service-icon">
-                         <DiCodeBadge />
+                        <GiArtificialIntelligence />
                       </span>
-                      
-                      <h5>Web Development</h5>
+
+                      <h5>Data Science and AI</h5>
                       <p>
                         Lorem ipsum dolor 
                         sit amet consectetur adipisicing elit. 
@@ -80,43 +84,40 @@ const About = ({ user }) => {
                       </p>
                     </div>
                 </Col>
-
-                <Col xs={4} className='mt-30'>
-                  <div className="service br2">
-                    <span className="service-icon">
-                      <GiArtificialIntelligence />
-                    </span>
-
-                    <h5>Data Science and AI</h5>
-                    <p>
-                      Lorem ipsum dolor 
-                      sit amet consectetur adipisicing elit. 
-                      Autem tenetur ratione quod.
-                    </p>
-                  </div>
+                <Col sm>
+                    <div className="service br3 shadow-5">
+                        <span className="service-icon">
+                          <DiCodeBadge />
+                        </span>
+                        
+                        <h5>Web Development</h5>
+                        <p>
+                          Lorem ipsum dolor 
+                          sit amet consectetur adipisicing elit. 
+                          Autem tenetur ratione quod.
+                        </p>
+                      </div>
                 </Col>
-
-                <Col xs={4} className='mt-30'>
-                  <div className="service br2">
-                      <span className="service-icon">
-                        <FaMobileAlt />
-                      </span>
-                      
-                      <h5>Mobile App Development</h5>
-                      <p>
-                        Lorem ipsum dolor 
-                        sit amet consectetur adipisicing elit. 
-                        Autem tenetur ratione quod.
-                      </p>
-                    </div>
+                < Col sm>
+                    <div className="service br3 shadow-5">
+                        <span className="service-icon">
+                          <FaMobileAlt />
+                        </span>
+                        
+                        <h5>Mobile App Development</h5>
+                        <p>
+                          Lorem ipsum dolor 
+                          sit amet consectetur adipisicing elit. 
+                          Autem tenetur ratione quod.
+                        </p>
+                      </div>
                 </Col>
-            </Row>
-          </div>
-        </div>
+                
+              </div>
+            </div>
+        </div>      
 
-
-      </div>
-
+      
     </Layout>
   );
 };

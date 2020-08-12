@@ -31,6 +31,7 @@
 
 .social-icons { 
     transition: all .2s ease-in-out; 
+    justify-content: center;
 }
 
 .social-icons a {
@@ -39,13 +40,14 @@
 }
 
 .social-icons a:hover { 
-    transform: scale(1.5); 
+    transform: scale(1.3); 
 }
 
 .bg-anime {
-    background-image: url("https://unsplash.com/photos/KXkgOigCqj0/download?force=true&w=1920");
+    background-image: url("https://media.tenor.com/images/fb7cdaca7bfe9581981bf3f8bf460114/tenor.gif");
     height: 100vh;
-    opacity: 1;
+    z-index: -1;
+    width: 100vw;
 }
 
 .overlay {
@@ -58,8 +60,14 @@
 
 
  @media (min-width: 1200px){
-    .container {
-        max-width: 1140px;
+    .container.container {
+        max-width: 100%;
     }
 
+ }
+
+ @media (min-width: 576px){
+    .container.container, .container-sm {
+        max-width: 100%;
+    }
  }

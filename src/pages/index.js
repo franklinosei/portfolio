@@ -8,7 +8,7 @@ import Resume from './Resume';
 
 const Pages = ({ user }) => {
   return (
-    <Router>
+    <Router basename={window.location.pathname || ' '}>
       <Switch>
         
         <Route exact path="/">
