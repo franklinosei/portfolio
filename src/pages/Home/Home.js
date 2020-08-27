@@ -17,7 +17,8 @@ const Home = ({ user }) => {
                  <h1>Hi, I am <span className='name-theme'>Franklin Osei</span></h1>
 
                   <Typical
-                      steps={['I am a python programmer and Data Scientist.', 2000, 'I also create websites', 3000, '& web applications alongside mobile app development.', 1500]}
+                      steps={['I am a python programmer and Data Scientist.', 2000, 'I also create websites with beautiful designs'
+                        , 3000, '& web applications alongside mobile app development.', 1500]}
                       loop={3}
                       wrapper="p"
                     />

@@ -1,35 +1,49 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import './Projects.css';
 
 const Projects = ({ user }) => {
+  const db = [
+    {
+      id: 1,
+      name: 'project name',
+      link: 'github link',
+      image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640'
+    },
+    {
+      id: 2,
+      name: 'project name',
+      link: 'github link',
+      image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640'
+    },
+    {
+      id: 3,
+      name: 'project name',
+      link: 'github link',
+      image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640'
+    },
+    {
+      id: 4,
+      name: 'project name',
+      link: 'github link',
+      image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640'
+    }
+  ]
+
   return (
     <Layout user={user}>
-      <div>
+      <div className='project-page-wrapper'>
+        <div className='project-area padding-top'>
 
-        {/*
-        import { SectionTitle, Pill } from '../../styles';
-        import { ProjectItem, ProjectTitle, SkillContainer } from './styles';
-        */}
+          <div className='sectionTitle'>
+            <h2>Projects</h2>  
+            <hr className='hr shadow-3'/>  
+          </div>
 
-            <h5 className='bg-black' style={{color:'white'}}>Page is under construction</h5>
 
-        {/*
-        <SectionTitle>Projects</SectionTitle>
-        <ul>
-          {user.projects.map((project, i) => (
-            <ProjectItem key={i}>
-              <ProjectTitle>{project.name}</ProjectTitle>
-              <p>{project.summary}</p>
-              <SkillContainer>
-                {[...project.languages, ...project.libraries].map((item, j) => (
-                  <Pill key={j}>{item}</Pill>
-                ))}
-              </SkillContainer>
-            </ProjectItem>
-          ))}
-        </ul>
-                */}
-      </div>
+         </div>
+      </div>      
+
     </Layout>
   );
 };
