@@ -42,7 +42,7 @@ const Home = ({ user }) => {
                         </a>
                       </Col>
                       <Col>
-                        <a class="link hover-silver near-black dib h2 w2 mr3" href="https://fb.com/franklinosei" title="Twitter">
+                        <a class="link hover-silver near-black dib h2 w2 mr3" href="https://fb.com/franklinosei" title="Facebook">
                            <AiFillFacebook />
                         </a>
                       </Col>

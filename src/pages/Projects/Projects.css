@@ -17,9 +17,19 @@
 .cards {
     margin: -2%;
     margin-bottom: 8%;
+    transition: all .2s ease-in-out; 
 }
 
 .project-content {
     display: flex;
     flex-wrap: wrap;
 }
+
+.cardColor {
+    color: black;
+}
+
+.cards:hover { 
+    transform: scale(1.01); 
+}
+

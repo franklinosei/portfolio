@@ -5,6 +5,8 @@ import {
   Card, CardText, CardBody, CardLink,
   CardTitle, CardSubtitle, Col
 } from 'reactstrap';
+import {AwesomeButton} from 'react-awesome-button';
+import {AiFillGithub} from 'react-icons/ai';
 
 const Projects = ({ user }) => {
   const db = [
@@ -13,28 +15,28 @@ const Projects = ({ user }) => {
       name: 'project name',
       link: 'github link',
       image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640',
-      description: 'lorenzxjkcndch zjkcbfvcbx hzb zcb zcbybchch'
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'
     },
     {
       id: 2,
       name: 'project name',
       link: 'github link',
       image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640',
-      description: 'lorenzxjkcndch zjkcbfvcbx hzb zcb zcbybchch'
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'
     },
     {
       id: 3,
       name: 'project name',
       link: 'github link',
       image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640',
-      description: 'lorenzxjkcndch zjkcbfvcbx hzb zcb zcbybchch'
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'
     },
     {
       id: 4,
       name: 'project name',
-      link: 'github link',
+      link: 'google.com',
       image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640',
-      description: 'lorenzxjkcndch zjkcbfvcbx hzb zcb zcbybchch'
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'
     }
   ]
 
@@ -56,14 +58,20 @@ const Projects = ({ user }) => {
                     <div className='cards shadow-3'>
                       <Card key={index}>
                         <CardBody>
-                          <CardTitle>{project.name}</CardTitle>
+                          <CardTitle><h5 className='cardColor'>{project.name}</h5></CardTitle>
                           <CardSubtitle>Card subtitle</CardSubtitle>
                         </CardBody>
-                        <img width="100%" src={project.image} alt={project.name} />
+                         <img width="100%" src={project.image} alt={project.name} />
                         <CardBody>
-                          <CardText>{project.description}</CardText>
-                          <CardLink href={project.link}>Card Link</CardLink>
-                          <CardLink href={project.link}>Another Link</CardLink>
+                          <CardText><h5 className='cardColor'>{project.description}</h5></CardText>
+                          <CardLink href={project.link}>
+                            <AwesomeButton size="medium" type="primary"> Card Link </AwesomeButton>
+                          </CardLink>
+                          <CardLink href={project.link}>
+                            <AwesomeButton size="medium" type="primary">
+                              <AiFillGithub /> Code
+                            </AwesomeButton>
+                          </CardLink>
                         </CardBody>
                       </Card>
                     </div>
