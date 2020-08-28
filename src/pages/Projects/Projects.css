@@ -1,7 +1,8 @@
 .project-page-wrapper{
     width: 100%;
     height: 100%;
-    background-color: rgb(199, 199, 199);
+    background: linear-gradient(70deg, rgb(199, 199, 199) 30%, rgba(0,0,0,0) 30%),
+    linear-gradient(120deg, rgb(199, 199, 199) 60%, #037fff 60%);;
     padding: 4%;
 
 }
@@ -14,22 +15,62 @@
     margin-top: auto;
 }
 
+.hr {
+    width: 50%;
+    background-color: #037fff;
+}
+
 .cards {
-    margin: -2%;
-    margin-bottom: 8%;
     transition: all .2s ease-in-out; 
+    background: lavender;
+    padding-bottom: 3%;
+    width: 45%;
+    margin: 0.8rem;
+    padding-bottom: 10px;
+}
+
+.cards h5 {
+    padding: 3%;
+}
+
+.cards p {
+    padding: 3%;
+}
+
+.cards a {
+    padding: 3%;
 }
 
 .project-content {
-    display: flex;
-    flex-wrap: wrap;
+
+    justify-content: center;
 }
 
-.cardColor {
-    color: black;
+.project-area {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .cards:hover { 
     transform: scale(1.01); 
 }
 
+
+
+@media screen and (max-width: 884px) {
+    .project-content {
+        flex-direction: column;
+        width: auto;
+    }
+    .cards {
+        margin: 1%;
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    
+    .project-area {
+        margin: 1%;
+    }
+}
