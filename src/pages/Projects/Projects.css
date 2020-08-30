@@ -1,6 +1,6 @@
 .project-page-wrapper{
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     background: linear-gradient(70deg, rgb(199, 199, 199) 30%, rgba(0,0,0,0) 30%),
     linear-gradient(120deg, rgb(199, 199, 199) 60%, #037fff 60%) fixed;
     padding: 4%;
