@@ -24,29 +24,29 @@ const Home = ({ user }) => {
                     />
                   
                   <div className='social-icons'>
-                  <Row>
-                    <Col>
-                      <a class="link near-black hover-silver dib h2 w2 mr3" href="https://github.com/franklinosei" title="GitHub">
-                        <AiFillGithub />
-                      </a>
-                   </Col>
-                   <Col>
-                      <a class="link hover-silver near-black dib h2 w2 mr3" href="https://linkedin.com/in/franklin-o-258b7210a" title="LinkedIn">
-                       <AiFillLinkedin />
-                      </a>
+                    <Row>
+                      <Col>
+                        <a class="link near-black hover-silver dib h2 w2 mr3" href="https://github.com/franklinosei" title="GitHub">
+                          <AiFillGithub />
+                        </a>
                     </Col>
+                    <Col>
+                        <a class="link hover-silver near-black dib h2 w2 mr3" href="https://linkedin.com/in/franklin-o-258b7210a" title="LinkedIn">
+                        <AiFillLinkedin />
+                        </a>
+                      </Col>
 
-                      <Col>
-                        <a class="link hover-silver near-black dib h2 w2 mr3" href="https://twitter.com/" title="Twitter">
-                         <AiOutlineTwitter />
-                        </a>
-                      </Col>
-                      <Col>
-                        <a class="link hover-silver near-black dib h2 w2 mr3" href="https://fb.com/franklinosei" title="Facebook">
-                           <AiFillFacebook />
-                        </a>
-                      </Col>
-                    </Row>
+                        <Col>
+                          <a class="link hover-silver near-black dib h2 w2 mr3" href="https://twitter.com/" title="Twitter">
+                          <AiOutlineTwitter />
+                          </a>
+                        </Col>
+                        <Col>
+                          <a class="link hover-silver near-black dib h2 w2 mr3" href="https://fb.com/franklinosei" title="Facebook">
+                            <AiFillFacebook />
+                          </a>
+                        </Col>
+                      </Row>
                    </div>
                 </div>
               </Col>

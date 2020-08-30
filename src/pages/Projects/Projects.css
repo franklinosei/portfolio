@@ -1,8 +1,8 @@
 .project-page-wrapper{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background: linear-gradient(70deg, rgb(199, 199, 199) 30%, rgba(0,0,0,0) 30%),
-    linear-gradient(120deg, rgb(199, 199, 199) 60%, #037fff 60%);;
+    linear-gradient(120deg, rgb(199, 199, 199) 60%, #037fff 60%) fixed;
     padding: 4%;
 
 }
@@ -20,57 +20,66 @@
     background-color: #037fff;
 }
 
-.cards {
-    transition: all .2s ease-in-out; 
-    background: lavender;
-    padding-bottom: 3%;
-    width: 45%;
-    margin: 0.8rem;
-    padding-bottom: 10px;
-}
-
-.cards h5 {
-    padding: 3%;
-}
-
-.cards p {
-    padding: 3%;
-}
-
-.cards a {
-    padding: 3%;
-}
-
-.project-content {
-
-    justify-content: center;
+.row-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-direction: row;
 }
 
 .project-area {
-    margin: 1rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.cards:hover { 
-    transform: scale(1.01); 
+.card {
+    margin-top: 30px;
+    max-width: 45%;
+    margin: 2%;
+
 }
 
+.card-content {
+    background: #e2e2e2;
+    padding: 15px;
+    height: 100%;
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image a {
+    cursor: pointer;
+}
+
+.card-image img{
+    object-fit: cover; 
+}
+
+.card-image a img {
+    transition: all .4s ease-in-out; 
+}
+
+.card-image a img:hover{
+    transform: scale(1.07); 
+}
+
+.card-text {
+    padding: 15px;
+}
 
 
 @media screen and (max-width: 884px) {
-    .project-content {
+    .row-cards {
         flex-direction: column;
-        width: auto;
     }
-    .cards {
-        margin: 1%;
-        width: 100%;
-        margin-bottom: 3%;
+
+    .card {
+        max-width: 100%;
+        margin: 3%;
+    
     }
     
-    .project-area {
-        margin: 1%;
-    }
 }
