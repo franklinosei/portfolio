@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import './Projects.css';
 import {AwesomeButton} from 'react-awesome-button';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const db = [
   {
@@ -27,6 +29,11 @@ const db = [
   }
 ]
 
+
+  AOS.init({ duration: 1000 });
+
+
+
 class Projects extends React.Component {
   
   constructor(props){
@@ -39,7 +46,7 @@ class Projects extends React.Component {
     }
   }
 
-
+ 
 
   render() {
 
@@ -58,7 +65,7 @@ class Projects extends React.Component {
                 db.map((project, index) => {
                   return(
                     
-                        <div className='card shadow-3 br3'>
+                        <div data-aos="fade-left" className='card shadow-3 br3'>
                           <div className='card-content'>
                             <div className='card-image'>
                               <a href={'"' + project.link + '"'}>

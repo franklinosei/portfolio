@@ -6,8 +6,8 @@ import { Col} from 'react-bootstrap';
 import {AwesomeButton} from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import { DiCodeBadge,  } from "react-icons/di";
-import { FaMobileAlt } from "react-icons/fa";
 import {GiArtificialIntelligence} from 'react-icons/gi';
+import {Link} from 'react-router-dom';
 
 
 const About = ({ user }) => {
@@ -35,7 +35,7 @@ const About = ({ user }) => {
 
             <div className='mt-30'></div>
 
-            <div>
+            <div className='about-content-div'>
 
               <Col xs={6} className='about-content mt-30 col'>
                     <h3>I am <span class="color-theme">Franklin Osei</span></h3>
@@ -52,8 +52,11 @@ const About = ({ user }) => {
                      </p>
           
  
-                    <a  href="/files/empty.pdf">
-                      <AwesomeButton size="small" type="primary"> View CV </AwesomeButton>                   
+                    <a  
+                      href="https://gitconnected.com/franklinosei/resume" 
+                      target='_blank'
+                      rel="noopener noreferrer">
+                       <AwesomeButton size="large" type="primary"> View CV </AwesomeButton>                   
                     </a>
 
                 </Col>
@@ -82,6 +85,10 @@ const About = ({ user }) => {
                         sit amet consectetur adipisicing elit. 
                         Autem tenetur ratione quod.
                       </p>
+                      <hr />
+                      <Link to="/projects">
+                        <AwesomeButton size="large" type="primary"> Projects >> </AwesomeButton> 
+                      </Link>
                     </div>
                 </Col>
                 <Col sm>
@@ -96,8 +103,13 @@ const About = ({ user }) => {
                           sit amet consectetur adipisicing elit. 
                           Autem tenetur ratione quod.
                         </p>
+                        <hr />
+                        <Link to="/projects">
+                          <AwesomeButton size="large" type="primary"> Projects >> </AwesomeButton> 
+                        </Link>
                       </div>
                 </Col>
+                {/*
                 < Col sm>
                     <div className="service br3 shadow-5">
                         <span className="service-icon">
@@ -112,7 +124,7 @@ const About = ({ user }) => {
                         </p>
                       </div>
                 </Col>
-                
+                        */}
               </div>
             </div>
         </div>      

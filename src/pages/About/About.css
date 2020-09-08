@@ -101,7 +101,13 @@
     padding: 20px;
 }
 
+.about-content {
+    margin-top: 30%;
+}
 
+.about-content-div{
+    padding-top: 12%;
+}
 
 .about-me-content {
     display: flex;
@@ -125,8 +131,8 @@
 }
 
 .about-image img {
-    height: 32rem;
-    width:35rem;
+
+    padding: 15%;
 }
 
 @media (max-width: 1050px) {
@@ -190,5 +196,12 @@
     
     
     
+  }
+
+  @media (max-width: 1050px) {
+    .about-content-div{
+        padding-top: 1%;
+        margin-top: -25px;
+    }
     
   }

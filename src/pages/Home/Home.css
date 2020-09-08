@@ -23,6 +23,7 @@
 .home-content h1{
     font-size: xx-large;
     color: white;
+    max-width: 100%;
 }
 
 .home-content p{

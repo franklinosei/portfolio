@@ -45,6 +45,10 @@
     height: 100%;
 }
 
+.card-content h5 {
+    color: black;
+}
+
 .card-image {
     position: relative;
     overflow: hidden;

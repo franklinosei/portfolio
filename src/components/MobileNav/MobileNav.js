@@ -14,6 +14,7 @@ const MobileNav = () => {
             renderIcon={Home32}
             iconDescription="Home"
             tooltipPosition="bottom"
+            
           />
         </NavLink>
 

@@ -5,10 +5,14 @@ import Home from './Home';
 import Projects from './Projects';
 import Contact from './Contact';
 import Resume from './Resume';
+import ScrollToTop from '../components/ScrollToTop';
+
 
 const Pages = ({ user }) => {
   return (
     <Router basename={window.location.pathname || ' '}>
+      <ScrollToTop />
+   
       <Switch>
         
         <Route exact path="/">
@@ -31,6 +35,7 @@ const Pages = ({ user }) => {
           <Contact user={user} />
         </Route>
       </Switch>
+  
     </Router>
   );
 };

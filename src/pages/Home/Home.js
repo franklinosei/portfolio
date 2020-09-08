@@ -26,23 +26,46 @@ const Home = ({ user }) => {
                   <div className='social-icons'>
                     <Row>
                       <Col>
-                        <a class="link near-black hover-silver dib h2 w2 mr3" href="https://github.com/franklinosei" title="GitHub">
+                        <a 
+                        target='_blank' 
+                        className="link near-black hover-silver dib h2 w2 mr3 social-icon" 
+                        href="https://github.com/franklinosei" 
+                        title="GitHub"
+                        rel="noopener noreferrer"
+                        >
                           <AiFillGithub />
                         </a>
                     </Col>
                     <Col>
-                        <a class="link hover-silver near-black dib h2 w2 mr3" href="https://linkedin.com/in/franklin-o-258b7210a" title="LinkedIn">
+                        <a 
+                        target='_blank' 
+                        className="link hover-silver near-black dib h2 w2 mr3" 
+                        href="https://linkedin.com/in/franklin-o-258b7210a" 
+                        title="LinkedIn"
+                        rel="noopener noreferrer"
+                        >
                         <AiFillLinkedin />
                         </a>
                       </Col>
 
                         <Col>
-                          <a class="link hover-silver near-black dib h2 w2 mr3" href="https://twitter.com/" title="Twitter">
+                          <a 
+                          target='_blank' 
+                          className="link hover-silver near-black dib h2 w2 mr3" 
+                          href="https://twitter.com/" 
+                          title="Twitter"
+                          rel="noopener noreferrer">
                           <AiOutlineTwitter />
                           </a>
                         </Col>
                         <Col>
-                          <a class="link hover-silver near-black dib h2 w2 mr3" href="https://fb.com/franklinosei" title="Facebook">
+                          <a 
+                          target='_blank' 
+                          className="link hover-silver near-black dib h2 w2 mr3" 
+                          href="https://fb.com/franklinosei" 
+                          title="Facebook"
+                          rel="noopener noreferrer"
+                          >
                             <AiFillFacebook />
                           </a>
                         </Col>
