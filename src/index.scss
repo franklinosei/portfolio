@@ -1,5 +1,5 @@
 @import '@carbon/themes/scss/themes';
-$carbon--theme: $carbon--theme--g100;
+$carbon--theme: $carbon--theme--g90;
 @include carbon--theme();
 
 @import 'carbon-components/scss/globals/scss/styles.scss';
@@ -14,13 +14,13 @@ a {
 
 a.bx--side-nav__link--current,
 a.bx--side-nav__link--current > span.bx--side-nav__link-text {
-  background-color: $ui-01;
+  background-color: #037fff;
   color: $text-04;
 }
 
 .bx--side-nav__item:not(.bx--side-nav__item--active)
   > .bx--side-nav__link:hover {
-  background-color: $ui-01;
+  background-color:  #037fff;
   color: $text-04;
 }
 

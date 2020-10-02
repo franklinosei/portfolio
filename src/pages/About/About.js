@@ -7,7 +7,7 @@ import {AwesomeButton} from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import { DiCodeBadge,  } from "react-icons/di";
 import {GiArtificialIntelligence} from 'react-icons/gi';
-import {Link} from 'react-router-dom';
+
 
 
 const About = ({ user }) => {
@@ -40,9 +40,9 @@ const About = ({ user }) => {
               <Col xs={6} className='about-content mt-30 col'>
                     <h3>I am <span class="color-theme">Franklin Osei</span></h3>
                     <p className='br2'>
-                      I'm a Passionate <strong>Data scientist,
-                      AI Engineer and a Full-stack Developer </strong>
-                       with many years of experience.
+                      I'm a Passionate <strong>
+                      ML/Deep Learning Engineer and a Full-stack web/mobile Developer. </strong>
+                      I've gained lots of experience in this fields.
 
                        <blockquote className="notification br2 pa3">
                        <em>
@@ -51,13 +51,13 @@ const About = ({ user }) => {
                       </blockquote>
                      </p>
           
- 
-                    <a  
-                      href="https://gitconnected.com/franklinosei/resume" 
-                      target='_blank'
-                      rel="noopener noreferrer">
-                       <AwesomeButton size="large" type="primary"> View CV </AwesomeButton>                   
-                    </a>
+                      <a 
+                        href="https://gitconnected.com/franklinosei/resume" 
+                        target='_blank'
+                        rel="noopener noreferrer">
+                        <AwesomeButton size="large" type="primary"  > View CV </AwesomeButton>                   
+                      </a>
+                  
 
                 </Col>
 
@@ -74,57 +74,46 @@ const About = ({ user }) => {
           </div>
             <div className='services'>
                 <Col sm>
-                  <div className="service br3 shadow-5">
+                  <div className="service br3">
                       <span className="service-icon">
                         <GiArtificialIntelligence />
                       </span>
 
                       <h5>Data Science and AI</h5>
                       <p>
-                        Lorem ipsum dolor 
-                        sit amet consectetur adipisicing elit. 
-                        Autem tenetur ratione quod.
+                        Trainning and deploying of ML models which 
+                        performs excellently on real world data are my expertise.
                       </p>
-                      <hr />
-                      <Link to="/projects">
-                        <AwesomeButton size="large" type="primary"> Projects >> </AwesomeButton> 
-                      </Link>
+
                     </div>
                 </Col>
                 <Col sm>
-                    <div className="service br3 shadow-5">
+                    <div className="service br3">
                         <span className="service-icon">
                           <DiCodeBadge />
                         </span>
                         
                         <h5>Web Development</h5>
                         <p>
-                          Lorem ipsum dolor 
-                          sit amet consectetur adipisicing elit. 
-                          Autem tenetur ratione quod.
+                          Very beautiful and responsively designed websites and 
+                          applications are assured.
                         </p>
-                        <hr />
-                        <Link to="/projects">
-                          <AwesomeButton size="large" type="primary"> Projects >> </AwesomeButton> 
-                        </Link>
                       </div>
                 </Col>
-                {/*
-                < Col sm>
-                    <div className="service br3 shadow-5">
+               
+           {/*     < Col sm>
+                    <div className="service br3">
                         <span className="service-icon">
                           <FaMobileAlt />
                         </span>
                         
                         <h5>Mobile App Development</h5>
                         <p>
-                          Lorem ipsum dolor 
-                          sit amet consectetur adipisicing elit. 
-                          Autem tenetur ratione quod.
+                          
                         </p>
                       </div>
-                </Col>
-                        */}
+                </Col> */}
+                      
               </div>
             </div>
         </div>      

@@ -3,7 +3,7 @@ import Layout from '../../components/Layout';
 import {Container, Col, Row} from 'react-bootstrap';
 import './Home.css';
 import Typical from 'react-typical';
-import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter, AiFillFacebook } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai';
 
 const Home = ({ user }) => {
   return (
@@ -59,7 +59,7 @@ const Home = ({ user }) => {
                           </a>
                         </Col>
                         <Col>
-                          <a 
+                  {/*        <a 
                           target='_blank' 
                           className="link hover-silver near-black dib h2 w2 mr3" 
                           href="https://fb.com/franklinosei" 
@@ -67,7 +67,7 @@ const Home = ({ user }) => {
                           rel="noopener noreferrer"
                           >
                             <AiFillFacebook />
-                          </a>
+                          </a>*/}
                         </Col>
                       </Row>
                    </div>

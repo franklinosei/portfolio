@@ -21,7 +21,6 @@
     margin-top: 60px;
 }
 
-
 .services {
     display: flex;
     flex-direction: row;
@@ -44,6 +43,7 @@
     margin: 20px;
     text-align: center;
     background-image: linear-gradient(to left, #7874ba, #4d8ce8, #00d4ff);
+    box-shadow:10px 10px 15px -10px #000;
 }
 
 .service h5 {

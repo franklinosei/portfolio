@@ -11,21 +11,21 @@ const db = [
     name: 'project name',
     link: 'github link',
     image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640',
-    description: 'Autem tenetur ratione quod.'
+    description: ''
   },
   {
     id: 2,
     name: 'project name',
     link: 'github link',
     image: 'https://unsplash.com/photos/hpjSkU2UYSU/download?force=true&w=640',
-    description: 'Autem tenetur ratione quod.'
+    description: ''
   },
   {
     id: 3,
     name: 'project name',
     link: 'github link',
     image: 'https://unsplash.com/photos/hpjSkU2UYSU/download?force=true&w=640',
-    description: 'Autem tenetur ratione quod.'
+    description: ''
   }
 ]
 

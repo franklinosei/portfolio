@@ -118,14 +118,10 @@ const Resume = ({ user }) => {
                       <h6 class="mi-resume-year">Present</h6>
                     </div>
                   <div class="mi-resume-details">
-                    <h5>Desktop Applications Developer</h5>
-                    <h6 class="mi-resume-company h6">Dawn of Abstraction</h6>
+                    <h5>ML/Deeplearning Engineer</h5>
+                    <h6 class="mi-resume-company h6">Freelance</h6>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, 
-                      adipisicing elit. Quas, magni mollitia, aspernatur
-                        consequatur accusamus vero eum facere exercitationem 
-                        velit suscipit ipsam placeat libero. Deleniti exercitationem 
-                        nostrum quasi. Molestiae, vel porro.
+                     
                     </p>
                   </div>
                </div>
@@ -141,11 +137,7 @@ const Resume = ({ user }) => {
                     <h5>Hackathon</h5>
                     <h6 class="mi-resume-company h6">UmojaHack</h6>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, 
-                      adipisicing elit. Quas, magni mollitia, aspernatur
-                        consequatur accusamus vero eum facere exercitationem 
-                        velit suscipit ipsam placeat libero. Deleniti exercitationem 
-                        nostrum quasi. Molestiae, vel porro.
+                      Expresso Churn Prediction Hackathon
                     </p>
                   </div>
                </div>
@@ -168,13 +160,7 @@ const Resume = ({ user }) => {
                   <div class="mi-resume-details">
                     <h5>Bsc Computer Science</h5>
                     <h6 class="mi-resume-company h6">University of Ghana</h6>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur, 
-                      adipisicing elit. Quas, magni mollitia, aspernatur
-                        consequatur accusamus vero eum facere exercitationem 
-                        velit suscipit ipsam placeat libero. Deleniti exercitationem 
-                        nostrum quasi. Molestiae, vel porro.
-                    </p>
+                   
                   </div>
                </div>
               </div>
