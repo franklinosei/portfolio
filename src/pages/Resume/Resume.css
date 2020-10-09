@@ -17,9 +17,10 @@
     will-change: margin-left;
 }
 
-.mi-progress-container:hover {
-    transform: scale(0.98);
+.mt-70 {
+    margin-top: 70px;
 }
+
 
 .section-title hr {
     background-color: #037fff;
@@ -66,44 +67,6 @@
     margin-top: 30px;
 }
 
-.mi-progress-title {
-    font-weight: 600;
-    margin-bottom: 0;
-}
-
-.mi-progress h6 {
-    font-size: 1.14rem;
-    line-height: 1.857rem;
-    color: #037fff;
-}
-
-.mi-progress-inner {
-    display: flex;
-    align-items: center;
-}
-
-.mi-progress-percentage {
-    flex: 0 0 60px;
-    color: #037fff;
-}
-
-.mi-progress-container {
-    background: #2e344e;
-    display: block;
-    height: 6px;
-    width: 100%;
-    position: relative;
-}
-
-.mi-progress-active {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: #037fff;
-    width: 0;
-    transition: all 1s cubic-bezier(.01,.57,.68,1.05) 0s;
-}
 
 .resume-area {
     padding-top: 70px;
@@ -238,14 +201,3 @@
 }
 
 
-
-
-
-@media (min-width: 992px){
-    .col-lg-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-
-}

@@ -1,0 +1,46 @@
+.mt-30 {
+  margin-top: 30;
+}
+
+.mi-progress-title {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+
+.mi-progress h6 {
+  font-size: 1.14rem;
+  line-height: 1.857rem;
+  color: #037fff;
+}
+
+.mi-progress-inner {
+  display: flex;
+  align-items: center;
+}
+
+.mi-progress-percentage {
+  flex: 0 0 60px;
+  color: #037fff;
+}
+
+.mi-progress-container {
+  background: #2e344e;
+  display: block;
+  height: 6px;
+  width: 100%;
+  position: relative;
+}
+
+.mi-progress-container:hover {
+  transform: scale(0.98);
+}
+
+@media (min-width: 992px){
+  .col-lg-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+
+
+}

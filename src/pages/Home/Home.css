@@ -26,29 +26,16 @@
     max-width: 100%;
 }
 
-.home-content p{
+.home-content h6{
     color: white;
-}
-
-.social-icons { 
-    transition: all .2s ease-in-out; 
-    justify-content: center;
-}
-
-.social-icons a {
-    padding-top: 5px;
-    color: white;
-}
-
-.social-icons a:hover { 
-    transform: scale(1.3); 
 }
 
 .bg-anime {
-    background-image: url("https://media.tenor.com/images/fb7cdaca7bfe9581981bf3f8bf460114/tenor.gif");
+    background-image: url(../Home/img/bg.gif);
     height: 100vh;
     z-index: -1;
-    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .overlay {
@@ -58,17 +45,59 @@
     opacity: 0.8;
 }
 
+.hire-button {
+    margin-top: 10%;
+}
+
+.hire {
+    background: dodgerblue;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid dodgerblue;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    box-shadow:10px 10px 10px -10px #000;
+}
+
+.hire h5 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.hire:hover {
+    cursor: pointer;
+    background: rgb(123, 176, 255);
+}
+
+
 
 
  @media (min-width: 1200px){
     .container.container {
         max-width: 100%;
     }
-
  }
 
  @media (min-width: 576px){
     .container.container, .container-sm {
         max-width: 100%;
+    }
+
+    .bg-anime {
+        max-width: 80px;
+    }
+ }
+
+ @media (max-width: 640px){
+
+    .bg-anime {
+        min-width: 100vw;
+        background-position-x: center;
+    }
+
+    .hire{
+        min-width: 150px;
+        margin-left: -5%;
     }
  }

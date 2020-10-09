@@ -27,7 +27,7 @@ const About = ({ user }) => {
 
             <Col xs={6} className='col'>
               
-                        <div className='about-image Tilt-inner br3'>
+                        <div className='about-image Tilt-inner'>
                           <img alt='aboutimage' src={img} />
                         </div>
               
@@ -42,7 +42,7 @@ const About = ({ user }) => {
                     <p className='br2'>
                       I'm a Passionate <strong>
                       ML/Deep Learning Engineer and a Full-stack web/mobile Developer. </strong>
-                      I've gained lots of experience in this fields.
+                      I've gained lots of experience in these fields.
 
                        <blockquote className="notification br2 pa3">
                        <em>
@@ -80,10 +80,10 @@ const About = ({ user }) => {
                       </span>
 
                       <h5>Data Science and AI</h5>
-                      <p>
+                      <h5>
                         Trainning and deploying of ML models which 
-                        performs excellently on real world data are my expertise.
-                      </p>
+                        performs excellently on real world data is just what I do.
+                      </h5>
 
                     </div>
                 </Col>
@@ -94,10 +94,10 @@ const About = ({ user }) => {
                         </span>
                         
                         <h5>Web Development</h5>
-                        <p>
-                          Very beautiful and responsively designed websites and 
-                          applications are assured.
-                        </p>
+                        <h5>
+                          Well designed and responsive websites and 
+                          applications which can do anything are assured.
+                        </h5>
                       </div>
                 </Col>
                

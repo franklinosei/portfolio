@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import './Resume.css';
-import {ProgressBar} from 'react-bootstrap';
 import {MdWork} from 'react-icons/md';
 import {IoMdSchool} from 'react-icons/io';
+import DevSkill from '../../components/DevSkill/DevSkill';
 
 const Resume = ({ user }) => {
   return (
@@ -13,89 +13,55 @@ const Resume = ({ user }) => {
           <div className='skills-area padding-top mi-section'>
             <div className='skills-container'>
               <div className='section-title'>
-                <h2>My Skills</h2>
+                <h2>Development Skills</h2>
                 <hr className='shadow-3'/>
               </div>
 
               <div className='mi-skills'>
                 <div className='row'>
 
-                  <div className="col-lg-6 mt-30">
-                    <div className="mi-progress">
-                      <h6 className="mi-progress-title">Python</h6>
-                      <div className="mi-progress-inner">
-                        <div className="mi-progress-percentage">95%</div>
-                        <div className="mi-progress-container">
-                           <ProgressBar animated now={95} max='100'/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div className="col-lg-6 mt-30">
-                    <div className="mi-progress">
-                      <h6 className="mi-progress-title">JavaScript</h6>
-                      <div className="mi-progress-inner">
-                        <div className="mi-progress-percentage">80%</div>
-                        <div className="mi-progress-container">
-                           <ProgressBar animated now={80} max='100'/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <DevSkill name={'Python'} level={90}  show={true} />
 
-                  <div className="col-lg-6 mt-30">
-                    <div className="mi-progress">
-                      <h6 className="mi-progress-title">HTML</h6>
-                      <div className="mi-progress-inner">
-                        <div className="mi-progress-percentage">95%</div>
-                        <div className="mi-progress-container">
-                          <ProgressBar animated now={95} max='100'/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <DevSkill name={'JavaScript'} level={85}  show={true} />
 
-                  <div className="col-lg-6 mt-30">
-                    <div className="mi-progress">
-                      <h6 className="mi-progress-title">CSS</h6>
-                      <div className="mi-progress-inner">
-                        <div className="mi-progress-percentage">80%</div>
-                        <div className="mi-progress-container">
-                          <ProgressBar animated now={80} max='100'/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <DevSkill name={'HTML/CSS'} level={95}   show={true} />
 
-                  <div className="col-lg-6 mt-30">
-                    <div className="mi-progress">
-                      <h6 className="mi-progress-title">JAVA</h6>
-                      <div className="mi-progress-inner">
-                        <div className="mi-progress-percentage">40%</div>
-                        <div className="mi-progress-container">
-                          <ProgressBar animated now={40} max='100'/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <DevSkill name={'Java'} level={50}  show={true} />
 
-                  <div className="col-lg-6 mt-30">
-                    <div className="mi-progress">
-                      <h6 className="mi-progress-title">C++</h6>
-                      <div className="mi-progress-inner">
-                        <div className="mi-progress-percentage">60%</div>
-                        <div className="mi-progress-container">
-                          <ProgressBar animated now={60} max='100'/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <DevSkill name={'C++'} level={65}  show={true} />
 
                 </div>
               </div>
             </div>
           </div>
+
+
+          <div className='skills-area padding-top mi-section mt-70'>
+            <div className='skills-container'>
+              <div className='section-title'>
+                <h2>Other Skills</h2>
+                <hr className='shadow-3'/>
+              </div>
+
+              <div className='mi-skills'>
+                <div className='row'>
+
+                  <DevSkill name={'Deep Learning'} level={100} />
+
+                  <DevSkill name={'React'} level={100} />
+
+                  <DevSkill name={'Flask'} level={100} />
+
+                  <DevSkill name={'Django'} level={100} />
+
+                  <DevSkill name={'Git'} level={100} />
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           <div className='resume-area mi-section mi-padding-bottom'>
             <div className='resume-container'>
@@ -115,17 +81,32 @@ const Resume = ({ user }) => {
               <div className='mi-resume-wrapper'>
                 <div class="mi-resume mt-30">
                     <div class="mi-resume-summary">
-                      <h6 class="mi-resume-year">Present</h6>
+                      <h6 class="mi-resume-year">2020 - Present</h6>
                     </div>
                   <div class="mi-resume-details">
                     <h5>ML/Deeplearning Engineer</h5>
                     <h6 class="mi-resume-company h6">Freelance</h6>
                     <p>
-                     
+                    I build and maintain code for ML models.
                     </p>
                   </div>
                </div>
               </div>
+
+              <div className='mi-resume-wrapper'>
+                <div class="mi-resume mt-30">
+                    <div class="mi-resume-summary">
+                      <h6 class="mi-resume-year">2020 - Present</h6>
+                    </div>
+                  <div class="mi-resume-details">
+                    <h5>Full Stack Web Developer</h5>
+                    <h6 class="mi-resume-company h6">Freelance</h6>
+                    <p>
+                     I build and maintain code for web apps and websites.
+                    </p>
+                  </div>
+                </div>
+               </div>
 
               <div className='mi-resume-wrapper'>
 
@@ -160,6 +141,7 @@ const Resume = ({ user }) => {
                   <div class="mi-resume-details">
                     <h5>Bsc Computer Science</h5>
                     <h6 class="mi-resume-company h6">University of Ghana</h6>
+                    <p>Currently studying a computer science major at the University of Ghana.</p>
                    
                   </div>
                </div>

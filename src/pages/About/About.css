@@ -131,9 +131,10 @@
 }
 
 .about-image img {
-
+    border-radius: 160px;
     padding: 15%;
 }
+
 
 @media (max-width: 1050px) {
     .services {

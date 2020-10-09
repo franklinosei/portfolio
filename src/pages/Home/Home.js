@@ -3,7 +3,7 @@ import Layout from '../../components/Layout';
 import {Container, Col, Row} from 'react-bootstrap';
 import './Home.css';
 import Typical from 'react-typical';
-import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Home = ({ user }) => {
   return (
@@ -14,16 +14,22 @@ const Home = ({ user }) => {
             <Row className='row center'>
               <Col xs={5}>
                 <div className='home-content'>
-                 <h1>Hi, I am <span className='name-theme'>Franklin Osei</span></h1>
+                 <h1>Hi<span role='img' aria-label="hand wave">👋</span>, I am <span className='name-theme'>Franklin Osei</span></h1>
 
                   <Typical
-                      steps={['I am a python programmer and Data Scientist.', 2000, 'I also create websites with beautiful designs'
+                      steps={['I am a python programmer and a Machine Learning Engineer.', 2000, 'I also create websites with beautiful designs'
                         , 3000, '& web applications alongside mobile app development.', 1500]}
                       loop={3}
-                      wrapper="p"
+                      wrapper="h6"
                     />
-                  
-                  <div className='social-icons'>
+                  <div className='hire-button'>
+                        <Link to="/contact">
+                              <button className='hire'>
+                                   <h5>Hire Me <span role='img' aria-label="hand wave">🙂</span></h5>
+                              </button>
+                         </Link>
+                  </div>
+                  { /* <div className='social-icons'>
                     <Row>
                       <Col>
                         <a 
@@ -59,7 +65,7 @@ const Home = ({ user }) => {
                           </a>
                         </Col>
                         <Col>
-                  {/*        <a 
+                          <a 
                           target='_blank' 
                           className="link hover-silver near-black dib h2 w2 mr3" 
                           href="https://fb.com/franklinosei" 
@@ -67,10 +73,10 @@ const Home = ({ user }) => {
                           rel="noopener noreferrer"
                           >
                             <AiFillFacebook />
-                          </a>*/}
+                          </a>
                         </Col>
                       </Row>
-                   </div>
+                   </div> */}
                 </div>
               </Col>
             </Row>

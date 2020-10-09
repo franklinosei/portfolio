@@ -4,6 +4,7 @@ import { SideNavItems, SideNavLink } from 'carbon-components-react/lib/component
 import './Sidebar.css';
 import { StyledSideNav } from './styles';
 import Tilt from 'react-tilt';
+import img from '../../pages/About/img/img.jpg';
 
 const items = [
   { name: 'Home', path: '/' },
@@ -23,7 +24,7 @@ const Sidebar = () => {
       <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 250, width: 250 }} >
         <div className='header-image Tilt-inner'>
         <a href='/'>
-          <img alt='brandimage' src='https://avatars2.githubusercontent.com/u/47639574?s=460&u=65b6e3094c1e51f6adf9320b408866f777c95089&v=4' />
+          <img alt='brandimage' src={img} />
         </a>
       </div>
       </Tilt>
