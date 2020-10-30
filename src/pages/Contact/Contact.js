@@ -112,7 +112,7 @@ class Contact extends React.Component {
             <button className='butt' type='submit' >Send Message</button>
 
             <div className='contact-email'>
-              <span class="fa fa-envelope-o"></span> <AiOutlineMail /> franklinosei15@gmail.com
+              <span className="fa fa-envelope-o"></span> <AiOutlineMail /> franklinosei15@gmail.com
 
             <div className='social-icons'>
                <a 
