@@ -1,13 +1,19 @@
 .resume-wrapper {
     width: 100%;
     height: 100%;
-    background-color: rgb(199, 199, 199);
+    background-color: white;
     margin-bottom: -10%;
     margin-left: end;
-    margin-right: initial;
-    padding: 10%;
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-right: initial; 
+
+    padding-bottom: 10%;
+
+    /*padding-right: 15px;
+    padding-left: 15px;*/
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .bx--content {
@@ -17,8 +23,40 @@
     will-change: margin-left;
 }
 
+.skills-wrapper{
+    max-width: 40%;
+    margin: 3% 0% 4% 1%;
+    
+    /*padding: 4% 2% 5% 2%;*/
+    
+}
+
+.upper{
+    box-shadow:0 10px 30px -15px #000;
+    padding: 4% 1% 12% 2%;
+    margin: 4% 0% 4% 4%;
+    border-top: 2px solid green;
+}
+
+.lower {
+    box-shadow:0 10px 30px -15px #000;
+    padding: 0% 2% 12% 2%;
+    margin: 7% 0% 0% 4%;
+    border-top: 2px solid blue;
+}
+
+
+
+.res-wrapper {
+    max-width: 60%;
+    margin: 4% 2% 4% 2%;
+    box-shadow:0 10px 30px -15px #000;
+    padding: 4%;
+    border-top: 2px solid red;
+}
+
 .mt-70 {
-    margin-top: 70px;
+    margin-top: 70px; 
 }
 
 
@@ -47,11 +85,12 @@
     font-size: 2.5rem;
 }
 
-.row {
+.column {
     display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+ /*   margin-right: -14px;
+    margin-left: -15px; */
 }
 
 .skills-container {
@@ -69,7 +108,7 @@
 
 
 .resume-area {
-    padding-top: 70px;
+   /* padding-top: 70px;*/
 }
 
 
@@ -91,7 +130,7 @@
      line-height: 2.43rem;
      font-weight: 700;
      font-family: Nunito,sans-serif;
-     color: #fff;
+     color: rgb(109, 108, 108);
      padding-top: 1rem;
 }
 
@@ -177,6 +216,34 @@
         font-size: 1.04rem;
         line-height: 1.657rem;
     }
+    .resume-wrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .lower {
+        margin: 7% 2% 0% 2%;   
+    }
+
+    .upper {
+        margin: 4% 2% 4% 2%;  
+    }
+
+    .resume-area {
+        padding-top: 70px;
+     }
+     .res-wrapper {
+        padding-top: 2%;
+        margin: 1% 2% 4% 2%;
+    }
+    .skills-wrapper{
+        padding-bottom: 5%;
+    }
+}
+@media only screen and (min-width: 992px){
+    .column{
+        margin-right: -100%;
+    }
 }
 
 @media only screen and (max-width: 767px){
@@ -184,13 +251,30 @@
         padding-left: 20px;
     }
 
+    .resume-area {
+        padding-top: 70px;
+     }
+
     .mi-resume-details {
         position: relative;
         padding-left: 50px;
     }
+    .res-wrapper{
+        max-width: 100%;
+    }
+
+    .skills-wrapper{
+        max-width: 100%;
+        padding-bottom: 15%;
+    }
+
+    .resume-wrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 
     .mi-smalltitle h4 {
-        font-size: 1.51rem;
+        font-size: 1.4rem;
         line-height: 2.13rem;
     }
 

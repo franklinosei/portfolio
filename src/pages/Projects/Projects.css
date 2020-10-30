@@ -1,8 +1,7 @@
 .project-page-wrapper{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(70deg, rgb(199, 199, 199) 30%, rgba(0,0,0,0) 30%),
-    linear-gradient(120deg, rgb(199, 199, 199) 60%, #037fff 60%) fixed;
+    background-color: white;
     padding: 4%;
 
 }
@@ -36,12 +35,17 @@
     margin-top: 30px;
     max-width: 45%;
     margin: 2%;
+    box-shadow:0 10px 30px -20px #000;
 
 }
 
+.card:hover {
+    box-shadow:0 10px 30px -15px #000;
+}
+
 .card-content {
-    background: #e2e2e2;
-    padding: 15px;
+    background: white;
+    
     height: 100%;
 }
 
@@ -67,13 +71,48 @@
 }
 
 .card-image a img:hover{
-    transform: scale(1.07); 
+    transform: scale(1.04); 
 }
 
 .card-text {
-    padding: 15px;
+    padding: 20px;
 }
 
+.card-text p{
+    color: rgb(59, 59, 59);
+}
+
+.dis-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: -15px;
+}
+
+.card-title { 
+    min-width: 90%;
+}
+
+.gitLink{
+    font-size: 25px;
+    margin-top: -10px;
+    
+}
+
+.gitLink a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.ico {
+    box-shadow:0 10px 10px -10px #000;
+    transition: all .4s ease-in-out; 
+}
+
+.ico:hover {
+    transform: scale(1.05); 
+}
 
 @media screen and (max-width: 884px) {
     .row-cards {
@@ -82,7 +121,7 @@
 
     .card {
         max-width: 100%;
-        margin: 3%;
+        margin: 5%;
     
     }
     

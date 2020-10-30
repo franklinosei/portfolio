@@ -7,11 +7,11 @@ import Tilt from 'react-tilt';
 import img from '../../pages/About/img/img.jpg';
 
 const items = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Resume', path: '/resume' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'HOME', path: '/' },
+  { name: 'ABOUT', path: '/about' },
+  { name: 'RESUME', path: '/resume' },
+  { name: 'PROJECTS', path: '/projects' },
+  { name: 'CONTACT', path: '/contact' },
 ];
 
 const Sidebar = () => {
@@ -53,7 +53,7 @@ const Sidebar = () => {
 
         </div>
       </SideNavItems>
-      <p class="mi-header-copyright">
+      <p className="mi-header-copyright">
             © 2020 
             <b>
               <a rel="noopener noreferrer" target="_blank" href="/">

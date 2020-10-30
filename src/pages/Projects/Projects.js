@@ -1,54 +1,41 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Layout from '../../components/Layout';
 import './Projects.css';
-import {AwesomeButton} from 'react-awesome-button';
+//import {AwesomeButton} from 'react-awesome-button';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import axios from 'axios';
+import {AiFillGithub} from 'react-icons/ai';
 
-const db = [
-  {
-    id: 1,
-    name: 'project name',
-    link: 'github link',
-    image: 'https://unsplash.com/photos/qjnAnF0jIGk/download?force=true&w=640',
-    description: ''
-  },
-  {
-    id: 2,
-    name: 'project name',
-    link: 'github link',
-    image: 'https://unsplash.com/photos/hpjSkU2UYSU/download?force=true&w=640',
-    description: ''
-  },
-  {
-    id: 3,
-    name: 'project name',
-    link: 'github link',
-    image: 'https://unsplash.com/photos/hpjSkU2UYSU/download?force=true&w=640',
-    description: ''
-  }
-]
-
-
+const Projects = () => {
   AOS.init({ duration: 1000 });
 
+  const [projects, setProjects] = useState(['']);
 
+  useEffect(() => {
+    const source = axios.CancelToken.source();
 
-class Projects extends React.Component {
-  
-  constructor(props){
-    super(props);
+    async function fetchProject() {
+                    await axios.get("https://api-port1.herokuapp.com/api/projects.json"
+                    , {cancelToken: source.token}).then((res) =>{ 
+                       const response = res.data;
+                      setProjects(response);
+          }, [setProjects]).catch(error => {
+            if(axios.isCancel(error)){
+              console.log(error.message)
+            } else {
+              console.log(error)
+            }
+        })
+      }
 
-    this.state = {
-      name: '',
-      email: '',
-      message: ''
-    }
+    fetchProject();
+
+    return () => {
+     source.cancel('Request canceled.');
   }
-
- 
-
-  render() {
+      
+  }, [setProjects]);
 
     return (
       <Layout>
@@ -62,24 +49,32 @@ class Projects extends React.Component {
 
             <div className='project-area row-cards'>
               {
-                db.map((project, index) => {
+                projects.map((project, index) => {
                   return(
                     
-                        <div data-aos="fade-left" className='card shadow-3 br3'>
+                        <div data-aos="fade-left" className='card br3' key={index}>
                           <div className='card-content'>
                             <div className='card-image'>
-                              <a href={'"' + project.link + '"'}>
-                                <img src={project.image} alt={project.name} />
+                              <a href={ project.url }>
+                                <img src={project.image_url} alt={project.title} />
                               </a>
                             </div>
                             <div className='card-text'>
-                              <h5>{project.description}</h5>
+                              <div className='dis-flex'>
+                                <div className='card-title'>
+                                   <h5>{project.title}</h5>
+                                </div>{ project.github ?
+                                <div className='gitLink'>
+                                  <a href={ project.github_url } target='_blank' rel="noopener noreferrer">
+                                    <AiFillGithub className='ico'/>
+                                  </a>
+                                </div>
+                                : '' }
+                              </div>
+                              <hr />
+                              <p>{project.description}</p>
                             </div>
-                            <a href={'"' + project.link + '"'}>
-                              <AwesomeButton size="medium" type="primary">
-                                See it >>
-                              </AwesomeButton>
-                            </a>
+                          
                           </div>
                         </div>
                     
@@ -95,7 +90,6 @@ class Projects extends React.Component {
 
       </Layout>
     );
-  };
 }
 
 export default Projects;

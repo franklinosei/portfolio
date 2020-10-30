@@ -4,6 +4,8 @@ import './Contact.css';
 import {AiOutlineMail} from 'react-icons/ai';
 import axios from 'axios';
 import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from 'react-icons/ai';
+import Loading from '../../components/Loading';
+import {Alert} from 'react-bootstrap';
 
 
 
@@ -14,22 +16,34 @@ class Contact extends React.Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      loading: false,
+      showAlert: false
     }
+
   }
+  
 
   handleSubmit(e) {
     e.preventDefault();
+    this.setModal();
+    
     axios({
       method: 'POST',
-      url: 'http://localhost:3001/api/contact',
-      data: this.state
+      url: 'https://api-port1.herokuapp.com/api/contact/',
+      data: {name: this.state.name,
+            email: this.state.email,
+            message: this.state.message},
+      headers: {
+        "Content-Type": "application/json"
+    }
     }).then((response) => {
-      if (response.data.status === 'success'){
-        alert('Message Sent.');
-        this.resetForm()
+      if (response.data.success === 'Sent'){
+        this.resetForm();
+        this.setAlert();
+
       }else {
-        if(response.data.status === 'fail'){
+        if(response.data.status === 'Failed'){
           alert("Message failed to send.")
         }
       }
@@ -37,9 +51,16 @@ class Contact extends React.Component {
   }
 
   resetForm() {
-    this.setState({name: '', email: '', message: ''})
+    this.setState({name: '', email: '', message: '', loading: false})
   }
 
+  setModal() {
+    this.setState({loading: true});
+  }
+
+  setAlert() {
+    this.setState({showAlert: true});
+  }
   
   render(){
   return (
@@ -47,8 +68,19 @@ class Contact extends React.Component {
       <div className='contact-page-wrapper'>
         <div className='padding-top'>
 
+          <Loading show={this.state.loading}/>
+
           <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method='POST'>
             <h2>CONTACT ME</h2>
+
+              { this.state.showAlert ?
+                <Alert variant="success" dismissible onClose={() => this.setState({showAlert: false})}>
+                    Message sent successfully!!!
+                </Alert>
+                :
+                ''
+              }
+
             <p type="Name:">
               <input 
                 placeholder="Please enter your name..."
