@@ -5,9 +5,9 @@ import './Home.css';
 import Typical from 'react-typical';
 import { Link } from 'react-router-dom';
 
-const Home = ({ user }) => {
+const Home = () => {
   return (
-    <Layout user={user}>
+    <Layout>
       <Container className='bg-anime'>
         <Container className='overlay'></Container>
           <Container className='container center'>
@@ -15,68 +15,20 @@ const Home = ({ user }) => {
               <Col xs={5}>
                 <div className='home-content'>
                  <h1>Hi<span role='img' aria-label="hand wave">👋</span>, I am <span className='name-theme'>Franklin Osei</span></h1>
-
-                  <Typical
-                      steps={['I am a python programmer and a Machine Learning Engineer.', 2000, 'I also create websites with beautiful designs'
-                        , 3000, '& web applications alongside mobile app development.', 1500]}
-                      loop={3}
-                      wrapper="h6"
-                    />
+                  <h4>I am a                    <Typical
+                        steps={['programmer 💻', 3000, 'Machine Learning Engineer 👨‍💻', 3000,
+                                'coffee lover ☕', 3000, 'student 👨‍🎓', 3000 , 'geek 🤓', 3000]}
+                        loop={Infinity}
+                        wrapper="strong"
+                      />
+                    </h4>
                   <div className='hire-button'>
                         <Link to="/contact">
                               <button className='hire'>
-                                   <h5>Hire Me <span role='img' aria-label="hand wave">🙂</span></h5>
+                                   <h5>Ready to talk? <span role='img' aria-label="hand wave">🙂</span></h5>
                               </button>
                          </Link>
                   </div>
-                  { /* <div className='social-icons'>
-                    <Row>
-                      <Col>
-                        <a 
-                        target='_blank' 
-                        className="link near-black hover-silver dib h2 w2 mr3 social-icon" 
-                        href="https://github.com/franklinosei" 
-                        title="GitHub"
-                        rel="noopener noreferrer"
-                        >
-                          <AiFillGithub />
-                        </a>
-                    </Col>
-                    <Col>
-                        <a 
-                        target='_blank' 
-                        className="link hover-silver near-black dib h2 w2 mr3" 
-                        href="https://linkedin.com/in/franklin-o-258b7210a" 
-                        title="LinkedIn"
-                        rel="noopener noreferrer"
-                        >
-                        <AiFillLinkedin />
-                        </a>
-                      </Col>
-
-                        <Col>
-                          <a 
-                          target='_blank' 
-                          className="link hover-silver near-black dib h2 w2 mr3" 
-                          href="https://twitter.com/" 
-                          title="Twitter"
-                          rel="noopener noreferrer">
-                          <AiOutlineTwitter />
-                          </a>
-                        </Col>
-                        <Col>
-                          <a 
-                          target='_blank' 
-                          className="link hover-silver near-black dib h2 w2 mr3" 
-                          href="https://fb.com/franklinosei" 
-                          title="Facebook"
-                          rel="noopener noreferrer"
-                          >
-                            <AiFillFacebook />
-                          </a>
-                        </Col>
-                      </Row>
-                   </div> */}
                 </div>
               </Col>
             </Row>

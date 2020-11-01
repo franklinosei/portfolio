@@ -76,10 +76,19 @@
 
 .card-text {
     padding: 20px;
+    overflow: hidden;
 }
 
 .card-text p{
-    color: rgb(59, 59, 59);
+    color: black;
+    text-overflow: ellipsis;
+    font-size: larger;
+}
+
+.card-text h5{
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 .dis-flex {

@@ -81,7 +81,7 @@ console.log(error)
         <div className='skills-wrapper'>
 
           <div className='upper'>
-          <div className='skills-area padding-top mi-section'>
+           <div className='skills-area padding-top mi-section'>
             <div className='skills-container'>
               <div className='section-title'>
                 <h2>Development Skills</h2>
@@ -154,7 +154,7 @@ console.log(error)
                         
                         <div class="mi-resume mt-30">
                           <div class="mi-resume-summary">
-                      <h6 class="mi-resume-year">{work.start_year} - {work.end_year}</h6>
+                            <h6 class="mi-resume-year">{work.start_year} - {work.end_year}</h6>
                           </div>
                           <div class="mi-resume-details">
                             <h5>{work.title}</h5>
@@ -171,6 +171,7 @@ console.log(error)
                   </div>
 
                   <div className='mt-30'></div>
+                  <div className='mt-20'></div>
 
                   <div className="mi-smalltitle">
                     <span className="mi-smalltitle-icon">

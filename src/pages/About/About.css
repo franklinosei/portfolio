@@ -1,8 +1,13 @@
 .about-page-wrapper{
-    width: 100%;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
+    margin: 0% 5% 0% 5%;
     
+}
+.about-wrapper {
+    background-color: white;
+    padding: 2% 0% 2% 0%;
 }
 
 .hr {
@@ -16,6 +21,13 @@
     margin-inline-end: auto;
 }
 
+.about-area {
+    box-shadow:0 10px 30px -15px #000;
+    border-top: 2px solid green;
+    border-radius: 6px; 
+    padding: 4% 1% 12% 1%;
+    margin: 4% 0% 4% 0%;
+}
 
 .mt-30 {
     margin-top: 60px;
@@ -26,24 +38,26 @@
     flex-direction: row;
 }
 
-.sectionTitle {
+.sctionTitle {
     margin-bottom: 30px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 2%;
     color: #037fff;
 }
 
 .color-theme {
     color: #037fff;
+    font-size: 1.8rem;
 }
 
 .service {
     height: 90%;
     padding: 20px;
-    margin: 20px;
+    margin: 20px 0px 20px 0px;
     text-align: center;
     background-image: linear-gradient(to left, #7874ba, #4d8ce8, #00d4ff);
-    box-shadow:10px 10px 15px -10px #000;
+    box-shadow:0 10px 30px -15px #000;
+    border-top: 2px solid #7874ba;
 }
 
 .service h5 {
@@ -53,8 +67,9 @@
 }
 
 .service p {
-    color: #ebecf0;
+    color: white;
     text-align: center;
+    font-weight: lighter;
 }
 
 .service-icon {
@@ -65,24 +80,23 @@
 }
 
 .service-area {
-    background-color: rgb(228, 224, 224);
-    margin-top: 60px;
-
-    margin-bottom: -30px;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    box-shadow:0 10px 30px -15px #000;
+    border-top: 2px solid blue;
+    border-radius: 6px; 
+    padding: 4% 1% 12% 1%;
+    margin: 4% 0% 10% 0%;
 }
 
 .paddings-top {
-    padding-top: 50px;
-    margin-top: 20px;
+    padding-top: 10px;
+    margin-top: 40px;
 }
 
 
 .about-content h3 {
     font-weight: 600;
     margin-top: -18%;
-    color: #fff;
+    color: black;
     font-size: 3rem;
     line-height: 2.7rem;
     justify-content: center;
@@ -96,17 +110,15 @@
     font-size: 18px;
     line-height: 1.8rem;
     font-family: Nunito,sans-serif;
-    color: rgb(235, 235, 235);
-    background-color: #706f6f;
+    color: black;
+
     padding: 20px;
 }
 
-.about-content {
-    margin-top: 30%;
-}
 
 .about-content-div{
-    padding-top: 12%;
+    
+    padding-top: 2%;
 }
 
 .about-me-content {
@@ -126,14 +138,15 @@
 }
 
 .notification {
-    background-color: #706f6f;
-    color: rgb(235, 235, 235);
+    margin-top: 12px;
 }
 
 .about-image img {
-    border-radius: 160px;
-    padding: 15%;
+    border-radius: 20%;
+    padding: 1%;
+    box-shadow:0 10px 30px -15px #000;
 }
+
 
 
 @media (max-width: 1050px) {
@@ -171,9 +184,9 @@
 @media (max-width: 640px) {
 
     .about-image img {
-        height: 25rem;
+        
         width:30rem;
-        padding: 5%;
+        padding: 1%;
     }
     
     .padding-top {
@@ -201,8 +214,7 @@
 
   @media (max-width: 1050px) {
     .about-content-div{
-        padding-top: 1%;
-        margin-top: -25px;
+       padding-bottom: 0%;
     }
     
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import './About.css';
 import img from './img/img.jpg';
-import { Col} from 'react-bootstrap'; 
+import { Col, Jumbotron} from 'react-bootstrap'; 
 import {AwesomeButton} from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import { DiCodeBadge,  } from "react-icons/di";
@@ -10,15 +10,15 @@ import {GiArtificialIntelligence} from 'react-icons/gi';
 
 
 
-const About = ({ user }) => {
+const About = () => {
   return (
-    <Layout user={user}> 
-    
+    <Layout > 
+    <div className='about-wrapper'>
       <div className='about-page-wrapper'>
 
         <div className='about-area padding-top'>
 
-          <div className='sectionTitle'>
+          <div className='sctionTitle'>
                 <h2>About Me</h2>  
                 <hr className='hr shadow-3'/>  
           </div>
@@ -38,16 +38,17 @@ const About = ({ user }) => {
             <div className='about-content-div'>
 
               <Col xs={6} className='about-content mt-30 col'>
-                    <h3>I am <span class="color-theme">Franklin Osei</span></h3>
+                  <Jumbotron>
+                    <h3>I am <span className="color-theme">Franklin Osei</span></h3>
                     <p className='br2'>
                       I'm a Passionate <strong>
-                      ML/Deep Learning Engineer and a Full-stack web/mobile Developer. </strong>
-                      I've gained lots of experience in these fields.
+                      ML/Deep Learning Engineer and a Full-stack web/mobile app Developer. </strong>
+                      
 
-                       <blockquote className="notification br2 pa3">
-                       <em>
-                         I look forward to working with you soon!
-                       </em>
+                       <blockquote className="notification br2 ">
+                        <em>
+                          I look forward to working with you soon!
+                        </em>
                       </blockquote>
                      </p>
           
@@ -57,6 +58,9 @@ const About = ({ user }) => {
                         rel="noopener noreferrer">
                         <AwesomeButton size="large" type="primary"  > View CV </AwesomeButton>                   
                       </a>
+                  </Jumbotron>
+                    
+
                   
 
                 </Col>
@@ -69,7 +73,7 @@ const About = ({ user }) => {
         <div className='paddings-top service-area'>
 
           <div className='sectionTitle'>
-              <h2>Services</h2>
+              <h2>Services I Offer</h2>
               <hr className='hr shadow-3'/>
           </div>
             <div className='services'>
@@ -80,10 +84,11 @@ const About = ({ user }) => {
                       </span>
 
                       <h5>Data Science and AI</h5>
-                      <h5>
-                        Trainning and deploying of ML models which 
-                        performs excellently on real world data is just what I do.
-                      </h5>
+                      
+                      <p>
+                        Training and deploying of ML models which 
+                        performs well on real world data is just what I do.
+                      </p>
 
                     </div>
                 </Col>
@@ -94,10 +99,10 @@ const About = ({ user }) => {
                         </span>
                         
                         <h5>Web Development</h5>
-                        <h5>
-                          Well designed and responsive websites and 
+                        <p>
+                          Well designed, responsive websites and 
                           applications which can do anything are assured.
-                        </h5>
+                        </p>
                       </div>
                 </Col>
                
@@ -117,7 +122,7 @@ const About = ({ user }) => {
               </div>
             </div>
         </div>      
-
+      </div>
       
     </Layout>
   );

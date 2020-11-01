@@ -109,6 +109,10 @@
     margin-top: 30px;
 }
 
+.mt-20 {
+    margin-top: 50px;
+}
+
 
 .resume-area {
    /* padding-top: 70px;*/
@@ -118,6 +122,9 @@
 .mi-smalltitle {
     display: flex;
     align-items: center;
+    box-shadow:0 10px 30px -29px #000;
+    
+    justify-content: center;
 }
 
 .mi-smalltitle-icon {
@@ -135,6 +142,7 @@
      font-family: Nunito,sans-serif;
      color: rgb(109, 108, 108);
      padding-top: 1rem;
+     
 }
 
 .mi-resume-wrapper {
@@ -143,6 +151,15 @@
 
 .mi-resume {
     display: flex;
+    border-bottom:1px solid red;
+    border-right: 1px solid red;
+    border-radius: 0px 8px 8px 0px;
+    box-shadow:0 10px 30px -22px #000;
+    padding: 10px 10px 10px 0px;
+}
+
+.mi-resume:hover {
+    box-shadow:0 10px 30px -18px #000;
 }
 
 .mt-30 {
