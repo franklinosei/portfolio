@@ -22,12 +22,15 @@ class Contact extends React.Component {
     }
 
   }
-  
 
-  handleSubmit(e) {
+
+
+ handleSubmit = (e)=> {
     e.preventDefault();
-    this.setModal();
-    
+    if(this.state.name || this.state.email || this.state.message){
+      this.setModal();
+    }
+     
     axios({
       method: 'POST',
       url: 'https://api-port1.herokuapp.com/api/contact/',
@@ -61,6 +64,8 @@ class Contact extends React.Component {
   setAlert() {
     this.setState({showAlert: true});
   }
+
+
   
   render(){
   return (

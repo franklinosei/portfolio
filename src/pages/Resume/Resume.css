@@ -39,6 +39,10 @@
 
 }
 
+.spins{
+    margin-left: 50%;
+}
+
 .lower {
     box-shadow:0 10px 30px -15px #000;
     padding: 0% 2% 12% 2%;

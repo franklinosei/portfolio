@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import {Container, Col, Row} from 'react-bootstrap';
+import {Container, Row} from 'react-bootstrap';
 import './Home.css';
 import Typical from 'react-typical';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ const Home = () => {
         <Container className='overlay'></Container>
           <Container className='container center'>
             <Row className='row center'>
-              <Col xs={5}>
+              <div className='home-text'>
                 <div className='home-content'>
                  <h1>Hi<span role='img' aria-label="hand wave">👋</span>, I am <span className='name-theme'>Franklin Osei</span></h1>
                   <h4>I am a                    <Typical
@@ -30,7 +30,7 @@ const Home = () => {
                          </Link>
                   </div>
                 </div>
-              </Col>
+              </div>
             </Row>
           </Container>
           </Container>

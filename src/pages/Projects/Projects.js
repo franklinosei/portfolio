@@ -6,11 +6,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import axios from 'axios';
 import {AiFillGithub} from 'react-icons/ai';
+import Spin from '../../components/Spinner';
 
 const Projects = () => {
   AOS.init({ duration: 1000 });
 
   const [projects, setProjects] = useState(['']);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const source = axios.CancelToken.source();
@@ -19,6 +21,7 @@ const Projects = () => {
                     await axios.get("https://api-port1.herokuapp.com/api/projects.json"
                     , {cancelToken: source.token}).then((res) =>{ 
                        const response = res.data;
+                      setLoading(false)
                       setProjects(response);
           }, [setProjects]).catch(error => {
             if(axios.isCancel(error)){
@@ -48,7 +51,10 @@ const Projects = () => {
             </div>
 
             <div className='project-area row-cards'>
-              {
+              { loading ?
+              <div className='spin'> 
+                <Spin />
+              </div> :
                 projects.map((project, index) => {
                   return(
                     

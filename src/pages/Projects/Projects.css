@@ -123,6 +123,11 @@
     transform: scale(1.05); 
 }
 
+.spin {
+    width: 10%;
+    margin: auto;
+}
+
 @media screen and (max-width: 884px) {
     .row-cards {
         flex-direction: column;

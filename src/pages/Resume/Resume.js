@@ -5,6 +5,7 @@ import axios from 'axios';
 import {MdWork} from 'react-icons/md';
 import {IoMdSchool} from 'react-icons/io';
 import DevSkill from '../../components/DevSkill/DevSkill';
+import Spin from '../../components/Spinner';
 
 const Resume = () => {
 
@@ -12,6 +13,7 @@ const Resume = () => {
   const [otherskills, setOtherSkills] = useState(['']);
   const [works, setWorks] = useState(['']);
   const [education, setEducation] = useState(['']);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const source = axios.CancelToken.source();
@@ -26,6 +28,7 @@ const Resume = () => {
                       setOtherSkills(res[1].data);
                       setWorks(res[2].data);
                       setEducation(res[3].data);
+                      setLoading(false)
           }, []).catch(error => {
             if(axios.isCancel(error)){
               console.log(error.message)
@@ -35,44 +38,13 @@ const Resume = () => {
         })
       }
 
-      /**
-    async function fetchOtherSkill() {
-        await axios.get("https://api-port1.herokuapp.com/api/otherskills.json"
-        ).then((res) =>{ 
-           const response = res.data;
-          setOtherSkills(response);
-}, []).catch(function(error) {
-console.log(error)
-})
-}
-
-async function fetchWork() {
-  await axios.get("https://api-port1.herokuapp.com/api/work.json"
-  ).then((res) =>{ 
-     const response = res.data;
-    setWorks(response);
-}, []).catch(function(error) {
-console.log(error)
-})
-}
-
-async function fetchEdu() {
-  await axios.get("https://api-port1.herokuapp.com/api/education.json"
-  ).then((res) =>{ 
-     const response = res.data;
-    setEducation(response);
-}, []).catch(function(error) {
-console.log(error)
-})
-}
-**/
     fetchData();
 
     return () => {
       source.cancel('Request canceled.');
    }
       
-  }, [setSkills, setOtherSkills, setWorks, setEducation]);
+  }, [setSkills, setOtherSkills, setWorks, setEducation, setLoading]);
 
   return (
     <Layout>
@@ -90,7 +62,12 @@ console.log(error)
 
               <div className='mi-skills'>
               <div className='column'>
-                {skills.map((skill, index) => {
+                { loading ?
+                <div className='spins'>
+                  <Spin />
+                </div>
+                   :
+                skills.map((skill, index) => {
                   return(
                     
                        <DevSkill name={skill.name} level={skill.level}  show={true} key={index}/>
@@ -115,7 +92,12 @@ console.log(error)
               <div className='mi-skills'>
                 <div className='column'>
 
-                {otherskills.map((otherskill, index) => {
+                { loading ?
+                <div className='spins'>
+                  <Spin />
+                </div>
+                   :
+                otherskills.map((otherskill, index) => {
                   return(
                     
                      <DevSkill name={otherskill.name} level={otherskill.level}  show={false} key={index}/>
@@ -149,7 +131,12 @@ console.log(error)
                   
                   <div className='mi-resume-wrapper'>
                     
-                  {works.map((work, index) => {
+                  { loading ?
+                  <div className='spins'>
+                    <Spin />
+                  </div>
+                   : 
+                  works.map((work, index) => {
                       return(
                         
                         <div class="mi-resume mt-30">
@@ -181,7 +168,13 @@ console.log(error)
                   </div>
 
                   <div className='mi-resume-wrapper'>
-                  {education.map((edu, index) => {
+                  { loading ?
+                    <div className='spins'>
+                      <Spin />
+                    </div>
+                   :
+                  
+                  education.map((edu, index) => {
                       return(
                           <div class="mi-resume mt-30" key={index}>
                             <div class="mi-resume-summary">

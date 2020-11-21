@@ -10,6 +10,7 @@
     transform: translate(-50%, -50%);
     
  }
+
  
  .home-content{
      text-align: center;
@@ -57,7 +58,7 @@
     margin-top: 10px;
     margin-bottom: -10px;
     box-shadow:10px 10px 10px -10px #000;
-}
+} 
 
 .hire h5 {
     color: white;
@@ -99,5 +100,9 @@
     .hire{
         min-width: 150px;
         margin-left: -5%;
+    }
+
+    .home-text {
+        max-width: 90%;
     }
  }
